@@ -43,7 +43,7 @@ So far, one single feature from the whole platform is available: Licenses.
 To validate a License Key, all you need to do is the following:
 
 ```ruby
-Sendowl::License.new(key: "ABCD-1234-EFGH-5678").valid?
+Sendowl::License.new(product_id: 1, key: "ABCD-1234-EFGH-5678").valid?
 ```
 
 This returns `true` or `false`
