@@ -1,6 +1,13 @@
-require "sendowl/version"
+require_relative "sendowl/version"
 
 module Sendowl
-  class Error < StandardError; end
-  # Your code goes here...
+  class << self
+    attr_accessor :api_endpoint, :open_timeout, :timeout, :api_key, :api_secret
+  end
+
+  self.api_endpoint   = "https://www.sendowl.com/api/v1"
+  self.open_timeout   = 10
+  self.timeout        = 30
+  self.api_key        = ENV["SENDOWL_API_KEY"]
+  self.api_secret     = ENV["SENDOWL_API_SECRET"]
 end
