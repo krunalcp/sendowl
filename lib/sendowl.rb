@@ -1,4 +1,5 @@
 require_relative "sendowl/version"
+require_relative "sendowl/request"
 
 module Sendowl
   class << self
