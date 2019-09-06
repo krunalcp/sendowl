@@ -4,7 +4,7 @@ require "json"
 
 module Sendowl
   class Request
-    attr_accessor :path, :method, :parameters, :headers, :query
+    attr_accessor :model, :path, :method, :parameters, :headers, :query
 
     DEFAULT_HEADERS = {
       'Content-Type' => 'application/json; charset=utf8',
@@ -12,9 +12,10 @@ module Sendowl
       'User-Agent'   => "sendowl-ruby/#{Sendowl::VERSION}"
     }
 
-    def initialize(path, method, options={})
+    def initialize(path, method, model, options={})
       @path       = path
       @method     = method
+      @model      = model
       @parameters = options[:params]  || {}
       @query      = options[:query]   || {}
       @headers    = options[:headers] || {}
@@ -23,6 +24,10 @@ module Sendowl
     def run
       response = RestClient::Request.execute request_params
       JSON.parse response.body
+    end
+
+    def call
+      model.parse run
     end
 
     protected
