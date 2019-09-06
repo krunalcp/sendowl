@@ -1,6 +1,8 @@
 require_relative "sendowl/version"
 require_relative "sendowl/request"
 
+require_relative "sendowl/resources/license"
+
 module Sendowl
   class << self
     attr_accessor :api_endpoint, :open_timeout, :timeout, :api_key, :api_secret
