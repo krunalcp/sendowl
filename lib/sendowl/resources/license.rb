@@ -11,14 +11,12 @@ module Sendowl
     end
 
     def valid?
-      license = Sendowl::Request.new(
+      Sendowl::Request.new(
         check_valid_path,
         "GET",
         self.class,
         { query: { key: key } }
       ).call.first
-
-      !(license.nil? || license.order_id.nil? || license.order_refunded)
     end
 
     class << self

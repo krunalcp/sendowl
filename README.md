@@ -46,7 +46,11 @@ To validate a License Key, all you need to do is the following:
 Sendowl::License.new(product_id: 1, key: "ABCD-1234-EFGH-5678").valid?
 ```
 
-This returns `true` or `false`
+This returns either an instance of Sendowl::License
+```ruby
+  #<Sendowl::License:0x00007ff96efe2008 @id=11111111, @order_id=22222222, @product_id=1, @key="ABCD-1234-EFGH-5678", @order_refunded=false>
+```
+or simply `nil`
 
 ## Contributing
 
