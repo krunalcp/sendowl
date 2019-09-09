@@ -29,8 +29,7 @@ Sendowl.api_key        = "YOUR_API_KEY"
 Sendowl.api_secret     = "YOUR_API_SECRET"
 ```
 
-or set the environment variable _SENDOWL\_API\_KEY_ (**recommended**)
-and _SENDOWL\_API\_SECRET_ (**recommended if needed**)
+or set the environment variable _SENDOWL\_API\_KEY_ and _SENDOWL\_API\_SECRET_ (**recommended**)
 
 ## Usage
 
@@ -64,12 +63,6 @@ This gem also needs specs and, since it's been brought to life in a hurry
 because I only needed one feature of it, has no open source CI configured nor
 anything that remotely guarantees its stability. So help in making it stable is
 also welcome.
-
-### Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ### Bugs and Issues
 
